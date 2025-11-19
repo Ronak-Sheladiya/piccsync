@@ -9,7 +9,6 @@ import Admin from './pages/Admin';
 import PhotoViewer from './pages/PhotoViewer';
 import Groups from './pages/Groups';
 import GroupDetail from './pages/GroupDetail';
-import UploadDemo from './pages/UploadDemo';
 import Navbar from './components/Navbar';
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
@@ -95,14 +94,6 @@ function App() {
                 <Navbar user={user} supabase={supabase} />
                 <div className="container">
                   <GroupDetail />
-                </div>
-              </>
-            } />
-            <Route path="/upload-demo" element={
-              <>
-                <Navbar user={user} supabase={supabase} />
-                <div className="container">
-                  <UploadDemo />
                 </div>
               </>
             } />
