@@ -13,6 +13,11 @@ const groupRoutes = require('./routes/groups');
 const app = express();
 const PORT = process.env.PORT || 4000;
 
+// Trust proxy for Railway
+if (process.env.TRUST_PROXY === 'true') {
+  app.set('trust proxy', true);
+}
+
 // Rate limiting
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
