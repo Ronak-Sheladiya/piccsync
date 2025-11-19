@@ -1,0 +1,77 @@
+const express = require('express');
+const multer = require('multer');
+const verifySupabaseAuth = require('../middleware/verifySupabaseAuth');
+const { supabase } = require('../services/supabaseClient');
+const {
+  uploadPhoto,
+  getUserPhotos,
+  getPhotoById,
+  updatePhotoVisibility,
+  deletePhoto
+} = require('../controllers/uploadController');
+
+const router = express.Router();
+
+// Configure multer for file uploads
+const upload = multer({
+  storage: multer.memoryStorage(),
+  fileFilter: (req, file, cb) => {
+    const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp', 'video/mp4', 'video/webm', 'video/ogg'];
+    if (allowedTypes.includes(file.mimetype)) {
+      cb(null, true);
+    } else {
+      cb(new Error('Invalid file type. Only images and videos are allowed.'));
+    }
+  }
+});
+
+// Upload photo
+router.post('/upload', verifySupabaseAuth, upload.single('file'), uploadPhoto);
+
+// Get user's photos
+router.get('/photos', verifySupabaseAuth, getUserPhotos);
+
+// Get user storage info
+router.get('/storage', verifySupabaseAuth, async (req, res) => {
+  try {
+    const { data: photos, error } = await supabase
+      .from('photos')
+      .select('file_size')
+      .eq('user_id', req.user.id);
+
+    if (error) {
+      return res.status(500).json({ error: 'Failed to fetch storage info' });
+    }
+
+    const used = photos.reduce((sum, photo) => sum + (photo.file_size || 0), 0);
+    const limit = 1073741824; // 1GB default
+    
+    console.log('Storage calculation:', {
+      photosCount: photos.length,
+      fileSizes: photos.map(p => p.file_size),
+      totalUsed: used,
+      limit
+    });
+    
+    res.json({
+      used,
+      limit,
+      remaining: limit - used,
+      percentage: Math.round((used / limit) * 100)
+    });
+  } catch (error) {
+    console.error('Storage info error:', error);
+    res.status(500).json({ error: 'Failed to get storage info' });
+  }
+});
+
+// Get specific photo
+router.get('/photos/:id', verifySupabaseAuth, getPhotoById);
+
+// Update photo visibility
+router.patch('/photos/:id', verifySupabaseAuth, updatePhotoVisibility);
+
+// Delete photo
+router.delete('/photos/:id', verifySupabaseAuth, deletePhoto);
+
+module.exports = router;

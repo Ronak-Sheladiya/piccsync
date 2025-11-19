@@ -1,0 +1,10 @@
+name = "photo-stash-api"
+main = "src/worker.js"
+compatibility_date = "2023-12-01"
+
+[env.production.vars]
+NODE_ENV = "production"
+
+[[env.production.r2_buckets]]
+binding = "BUCKET"
+bucket_name = "photo-stash-bucket"
