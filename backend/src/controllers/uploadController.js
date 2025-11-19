@@ -283,6 +283,46 @@ const updatePhotoVisibility = async (req, res) => {
   }
 };
 
+const downloadPhoto = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const adminUserIds = process.env.ADMIN_USER_IDS?.split(',').map(id => id.trim()) || [];
+    const isAdmin = adminUserIds.includes(req.user.id);
+
+    const { data: photo, error } = await supabase
+      .from('photos')
+      .select('*')
+      .eq('id', id)
+      .single();
+
+    if (error || !photo) {
+      return res.status(404).json({ error: 'Photo not found' });
+    }
+
+    // Check permissions
+    if (photo.user_id !== req.user.id && !isAdmin) {
+      return res.status(403).json({ error: 'Access denied' });
+    }
+
+    // Get file from R2
+    const getObjectResponse = await s3.send(new GetObjectCommand({
+      Bucket: bucket,
+      Key: photo.r2_key
+    }));
+
+    // Set appropriate headers
+    res.setHeader('Content-Type', photo.mime_type || 'application/octet-stream');
+    res.setHeader('Content-Disposition', `attachment; filename="${photo.filename}"`);
+    res.setHeader('Content-Length', getObjectResponse.ContentLength);
+
+    // Stream the file
+    getObjectResponse.Body.pipe(res);
+  } catch (error) {
+    console.error('Download photo error:', error);
+    res.status(500).json({ error: 'Failed to download photo' });
+  }
+};
+
 const deletePhoto = async (req, res) => {
   try {
     const { id } = req.params;
@@ -332,5 +372,6 @@ module.exports = {
   getUserPhotos,
   getPhotoById,
   updatePhotoVisibility,
+  downloadPhoto,
   deletePhoto
 };

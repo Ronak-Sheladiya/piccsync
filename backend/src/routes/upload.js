@@ -7,6 +7,7 @@ const {
   getUserPhotos,
   getPhotoById,
   updatePhotoVisibility,
+  downloadPhoto,
   deletePhoto
 } = require('../controllers/uploadController');
 
@@ -70,6 +71,9 @@ router.get('/photos/:id', verifySupabaseAuth, getPhotoById);
 
 // Update photo visibility
 router.patch('/photos/:id', verifySupabaseAuth, updatePhotoVisibility);
+
+// Download photo
+router.get('/photos/:id/download', verifySupabaseAuth, downloadPhoto);
 
 // Delete photo
 router.delete('/photos/:id', verifySupabaseAuth, deletePhoto);

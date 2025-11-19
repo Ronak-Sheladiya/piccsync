@@ -38,9 +38,10 @@ function PhotoCard({ photo, onDelete, onUpdate, viewMode = 'grid', isGroupPhoto 
   const downloadPhoto = async (e) => {
     e.stopPropagation();
     try {
-      const response = await fetch(photo.url);
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
+      const response = await api.get(`/photos/${photo.id}/download`, {
+        responseType: 'blob'
+      });
+      const url = window.URL.createObjectURL(response.data);
       const link = document.createElement('a');
       link.href = url;
       link.download = photo.filename;
