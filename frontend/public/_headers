@@ -1,2 +1,0 @@
-/*
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-eval'; connect-src 'self' https://piccsync-production.up.railway.app https://*.supabase.co; img-src 'self' data: https:;
