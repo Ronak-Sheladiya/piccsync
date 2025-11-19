@@ -1,1 +1,1 @@
-export const API_BASE = import.meta.env.VITE_API_BASE_URL || 'https://piccsync.railway.internal/api';
+export const API_BASE = import.meta.env.VITE_API_BASE_URL || 'https://piccsync-production.up.railway.app/api';
