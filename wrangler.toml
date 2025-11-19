@@ -1,0 +1,14 @@
+# Cloudflare Pages configuration
+name = "<project-name>" # Replace with your project name
+account_id = "" # Replace with your Cloudflare account ID
+
+# For Pages Functions, compatibility_date is optional but recommended
+compatibility_date = "2023-10-30"
+
+# R2 bucket binding - replace bucket_name with your actual R2 bucket name
+[[r2_buckets]]
+binding = "MY_BUCKET"
+bucket_name = "<your-bucket-name>" # Replace with your R2 bucket name
+
+# Environment variables (set these in Cloudflare Pages dashboard)
+# JWT_SECRET = "your-secret-key"
