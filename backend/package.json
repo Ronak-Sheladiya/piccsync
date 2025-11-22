@@ -2,9 +2,9 @@
   "name": "photo-stash-backend",
   "version": "1.0.0",
   "description": "Backend for photo-stash app",
-  "main": "src/index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node app.js",
     "dev": "nodemon src/index.js",
     "test": "jest"
   },
