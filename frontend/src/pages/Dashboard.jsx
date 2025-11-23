@@ -17,10 +17,13 @@ function Dashboard({ user }) {
 
   const fetchPhotos = async () => {
     try {
+      console.log('🔍 Fetching photos from API...');
       const response = await api.get('/photos');
+      console.log('📊 Photos response:', response.data);
       setPhotos(response.data);
     } catch (error) {
-      console.error('Failed to fetch photos:', error);
+      console.error('❌ Failed to fetch photos:', error);
+      console.error('❌ Error details:', error.response?.data);
     } finally {
       setLoading(false);
     }

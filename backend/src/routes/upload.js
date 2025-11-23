@@ -2,6 +2,9 @@ const express = require('express');
 const multer = require('multer');
 const verifySupabaseAuth = require('../middleware/verifySupabaseAuth');
 const { supabase } = require('../services/supabaseClient');
+const { s3, bucket } = require('../config/r2');
+const { GetObjectCommand } = require('@aws-sdk/client-s3');
+const { getSignedUrl } = require('@aws-sdk/s3-request-presigner');
 const {
   uploadPhoto,
   getUserPhotos,
@@ -32,6 +35,8 @@ router.post('/upload', verifySupabaseAuth, upload.single('file'), uploadPhoto);
 // Get user's photos
 router.get('/photos', verifySupabaseAuth, async (req, res) => {
   try {
+    console.log('🔍 Fetching photos for user:', req.user.id);
+    
     const { data, error } = await supabase
       .from('photos')
       .select('*')
@@ -39,7 +44,10 @@ router.get('/photos', verifySupabaseAuth, async (req, res) => {
       .is('group_id', null)
       .order('created_at', { ascending: false });
 
+    console.log('📊 Photos query result:', { data: data?.length, error });
+
     if (error) {
+      console.error('❌ Photos fetch error:', error);
       return res.status(500).json({ error: 'Failed to fetch photos' });
     }
 
@@ -51,10 +59,12 @@ router.get('/photos', verifySupabaseAuth, async (req, res) => {
         }), { expiresIn: 3600 });
         return { ...photo, url };
       } catch (error) {
+        console.error('❌ URL generation error for photo:', photo.id, error);
         return { ...photo, url: null, error: 'Failed to load image' };
       }
     }));
 
+    console.log('✅ Sending photos response:', photosWithUrls.length, 'photos');
     res.json(photosWithUrls);
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch photos' });
