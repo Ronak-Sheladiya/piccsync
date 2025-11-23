@@ -153,13 +153,19 @@ const uploadPhoto = async (req, res) => {
 
 const getUserPhotos = async (req, res) => {
   try {
+    console.log('Fetching photos for user:', req.user.id);
+    
     const { data, error } = await supabase
       .from('photos')
       .select('*')
       .eq('user_id', req.user.id)
+      .is('group_id', null)
       .order('created_at', { ascending: false });
 
+    console.log('Photos query result:', { data, error, count: data?.length });
+
     if (error) {
+      console.error('Database error:', error);
       return res.status(500).json({ error: 'Failed to fetch photos' });
     }
 

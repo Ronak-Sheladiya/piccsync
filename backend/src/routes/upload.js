@@ -30,7 +30,36 @@ const upload = multer({
 router.post('/upload', verifySupabaseAuth, upload.single('file'), uploadPhoto);
 
 // Get user's photos
-router.get('/photos', verifySupabaseAuth, getUserPhotos);
+router.get('/photos', verifySupabaseAuth, async (req, res) => {
+  try {
+    const { data, error } = await supabase
+      .from('photos')
+      .select('*')
+      .eq('user_id', req.user.id)
+      .is('group_id', null)
+      .order('created_at', { ascending: false });
+
+    if (error) {
+      return res.status(500).json({ error: 'Failed to fetch photos' });
+    }
+
+    const photosWithUrls = await Promise.all(data.map(async photo => {
+      try {
+        const url = await getSignedUrl(s3, new GetObjectCommand({
+          Bucket: bucket,
+          Key: photo.r2_key
+        }), { expiresIn: 3600 });
+        return { ...photo, url };
+      } catch (error) {
+        return { ...photo, url: null, error: 'Failed to load image' };
+      }
+    }));
+
+    res.json(photosWithUrls);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch photos' });
+  }
+});
 
 // Get user storage info
 router.get('/storage', verifySupabaseAuth, async (req, res) => {

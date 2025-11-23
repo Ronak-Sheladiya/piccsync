@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:4000/api';
+const API_BASE_URL = 'http://piccsync-env-1.eba-wtfvgd3m.us-east-1.elasticbeanstalk.com/api';
+console.log('🔍 API_BASE_URL (hardcoded):', API_BASE_URL);
 
 const api = axios.create({
   baseURL: API_BASE_URL,
