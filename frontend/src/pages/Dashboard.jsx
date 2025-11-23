@@ -11,9 +11,22 @@ function Dashboard({ user }) {
   const [storageInfo, setStorageInfo] = useState({ used: 0, limit: 1073741824 });
 
   useEffect(() => {
+    // Test API connectivity first
+    testAPI();
     fetchPhotos();
     fetchStorageInfo();
   }, []);
+
+  const testAPI = async () => {
+    try {
+      console.log('🧪 Testing API connectivity...');
+      const response = await api.get('/test');
+      console.log('✅ API test successful:', response.data);
+    } catch (error) {
+      console.error('❌ API test failed:', error);
+      console.error('❌ Error response:', error.response);
+    }
+  };
 
   const fetchPhotos = async () => {
     try {

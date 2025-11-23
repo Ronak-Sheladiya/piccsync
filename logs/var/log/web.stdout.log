@@ -1,0 +1,221 @@
+Nov 22 15:28:37 ip-172-31-93-64 web[2140]: R2 Configuration:
+Nov 22 15:28:37 ip-172-31-93-64 web[2140]: - Endpoint: https://c56a0b5deb7568b708edf3a06756423d.r2.cloudflarestorage.com
+Nov 22 15:28:37 ip-172-31-93-64 web[2140]: - Bucket: storage-project
+Nov 22 15:28:37 ip-172-31-93-64 web[2140]: - Access Key: Set
+Nov 22 15:28:37 ip-172-31-93-64 web[2140]: - Secret Key: Set
+Nov 22 15:28:37 ip-172-31-93-64 web[2140]: R2 configured - bucket will be created on first upload if needed
+Nov 22 15:28:37 ip-172-31-93-64 web[2140]: Server running on port 8080
+Nov 22 15:34:19 ip-172-31-93-64 web[2140]: ValidationError: The 'X-Forwarded-For' header is set but the Express 'trust proxy' setting is false (default). This could indicate a misconfiguration which would prevent express-rate-limit from accurately identifying users. See https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/ for more information.
+Nov 22 15:34:19 ip-172-31-93-64 web[2140]:    at Object.xForwardedForHeader (/var/app/current/node_modules/express-rate-limit/dist/index.cjs:185:13)
+Nov 22 15:34:19 ip-172-31-93-64 web[2140]:    at wrappedValidations.<computed> [as xForwardedForHeader] (/var/app/current/node_modules/express-rate-limit/dist/index.cjs:397:22)
+Nov 22 15:34:19 ip-172-31-93-64 web[2140]:    at Object.keyGenerator (/var/app/current/node_modules/express-rate-limit/dist/index.cjs:658:20)
+Nov 22 15:34:19 ip-172-31-93-64 web[2140]:    at /var/app/current/node_modules/express-rate-limit/dist/index.cjs:710:32
+Nov 22 15:34:19 ip-172-31-93-64 web[2140]:    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Nov 22 15:34:19 ip-172-31-93-64 web[2140]:    at async /var/app/current/node_modules/express-rate-limit/dist/index.cjs:691:5 {
+Nov 22 15:34:19 ip-172-31-93-64 web[2140]:  code: 'ERR_ERL_UNEXPECTED_X_FORWARDED_FOR',
+Nov 22 15:34:19 ip-172-31-93-64 web[2140]:  help: 'https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/'
+Nov 22 15:34:19 ip-172-31-93-64 web[2140]: }
+Nov 22 15:58:23 ip-172-31-93-64 web[3203]: R2 Configuration:
+Nov 22 15:58:23 ip-172-31-93-64 web[3203]: - Endpoint: https://c56a0b5deb7568b708edf3a06756423d.r2.cloudflarestorage.com
+Nov 22 15:58:23 ip-172-31-93-64 web[3203]: - Bucket: storage-project
+Nov 22 15:58:23 ip-172-31-93-64 web[3203]: - Access Key: Set
+Nov 22 15:58:23 ip-172-31-93-64 web[3203]: - Secret Key: Set
+Nov 22 15:58:23 ip-172-31-93-64 web[3203]: R2 configured - bucket will be created on first upload if needed
+Nov 22 15:58:23 ip-172-31-93-64 web[3203]: Server running on port 8080
+Nov 22 16:00:59 ip-172-31-93-64 web[3203]: ValidationError: The 'X-Forwarded-For' header is set but the Express 'trust proxy' setting is false (default). This could indicate a misconfiguration which would prevent express-rate-limit from accurately identifying users. See https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/ for more information.
+Nov 22 16:00:59 ip-172-31-93-64 web[3203]:    at Object.xForwardedForHeader (/var/app/current/node_modules/express-rate-limit/dist/index.cjs:185:13)
+Nov 22 16:00:59 ip-172-31-93-64 web[3203]:    at wrappedValidations.<computed> [as xForwardedForHeader] (/var/app/current/node_modules/express-rate-limit/dist/index.cjs:397:22)
+Nov 22 16:00:59 ip-172-31-93-64 web[3203]:    at Object.keyGenerator (/var/app/current/node_modules/express-rate-limit/dist/index.cjs:658:20)
+Nov 22 16:00:59 ip-172-31-93-64 web[3203]:    at /var/app/current/node_modules/express-rate-limit/dist/index.cjs:710:32
+Nov 22 16:00:59 ip-172-31-93-64 web[3203]:    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Nov 22 16:00:59 ip-172-31-93-64 web[3203]:    at async /var/app/current/node_modules/express-rate-limit/dist/index.cjs:691:5 {
+Nov 22 16:00:59 ip-172-31-93-64 web[3203]:  code: 'ERR_ERL_UNEXPECTED_X_FORWARDED_FOR',
+Nov 22 16:00:59 ip-172-31-93-64 web[3203]:  help: 'https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/'
+Nov 22 16:00:59 ip-172-31-93-64 web[3203]: }
+Nov 22 16:27:48 ip-172-31-93-64 web[4285]: R2 Configuration:
+Nov 22 16:27:48 ip-172-31-93-64 web[4285]: - Endpoint: https://c56a0b5deb7568b708edf3a06756423d.r2.cloudflarestorage.com
+Nov 22 16:27:48 ip-172-31-93-64 web[4285]: - Bucket: storage-project
+Nov 22 16:27:48 ip-172-31-93-64 web[4285]: - Access Key: Set
+Nov 22 16:27:48 ip-172-31-93-64 web[4285]: - Secret Key: Set
+Nov 22 16:27:48 ip-172-31-93-64 web[4285]: R2 configured - bucket will be created on first upload if needed
+Nov 22 16:27:48 ip-172-31-93-64 web[4285]: Server running on port 8080
+Nov 22 16:28:20 ip-172-31-93-64 web[4285]: ValidationError: The 'X-Forwarded-For' header is set but the Express 'trust proxy' setting is false (default). This could indicate a misconfiguration which would prevent express-rate-limit from accurately identifying users. See https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/ for more information.
+Nov 22 16:28:20 ip-172-31-93-64 web[4285]:    at Object.xForwardedForHeader (/var/app/current/node_modules/express-rate-limit/dist/index.cjs:185:13)
+Nov 22 16:28:20 ip-172-31-93-64 web[4285]:    at wrappedValidations.<computed> [as xForwardedForHeader] (/var/app/current/node_modules/express-rate-limit/dist/index.cjs:397:22)
+Nov 22 16:28:20 ip-172-31-93-64 web[4285]:    at Object.keyGenerator (/var/app/current/node_modules/express-rate-limit/dist/index.cjs:658:20)
+Nov 22 16:28:20 ip-172-31-93-64 web[4285]:    at /var/app/current/node_modules/express-rate-limit/dist/index.cjs:710:32
+Nov 22 16:28:20 ip-172-31-93-64 web[4285]:    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Nov 22 16:28:20 ip-172-31-93-64 web[4285]:    at async /var/app/current/node_modules/express-rate-limit/dist/index.cjs:691:5 {
+Nov 22 16:28:20 ip-172-31-93-64 web[4285]:  code: 'ERR_ERL_UNEXPECTED_X_FORWARDED_FOR',
+Nov 22 16:28:20 ip-172-31-93-64 web[4285]:  help: 'https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/'
+Nov 22 16:28:20 ip-172-31-93-64 web[4285]: }
+Nov 22 19:03:11 ip-172-31-93-64 web[9958]: R2 Configuration:
+Nov 22 19:03:11 ip-172-31-93-64 web[9958]: - Endpoint: https://c56a0b5deb7568b708edf3a06756423d.r2.cloudflarestorage.com
+Nov 22 19:03:11 ip-172-31-93-64 web[9958]: - Bucket: storage-project
+Nov 22 19:03:11 ip-172-31-93-64 web[9958]: - Access Key: Set
+Nov 22 19:03:11 ip-172-31-93-64 web[9958]: - Secret Key: Set
+Nov 22 19:03:11 ip-172-31-93-64 web[9958]: R2 configured - bucket will be created on first upload if needed
+Nov 22 19:03:11 ip-172-31-93-64 web[9958]: Server running on port 8080
+Nov 22 19:03:38 ip-172-31-93-64 web[9958]: ValidationError: The 'X-Forwarded-For' header is set but the Express 'trust proxy' setting is false (default). This could indicate a misconfiguration which would prevent express-rate-limit from accurately identifying users. See https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/ for more information.
+Nov 22 19:03:38 ip-172-31-93-64 web[9958]:    at Object.xForwardedForHeader (/var/app/current/node_modules/express-rate-limit/dist/index.cjs:185:13)
+Nov 22 19:03:38 ip-172-31-93-64 web[9958]:    at wrappedValidations.<computed> [as xForwardedForHeader] (/var/app/current/node_modules/express-rate-limit/dist/index.cjs:397:22)
+Nov 22 19:03:38 ip-172-31-93-64 web[9958]:    at Object.keyGenerator (/var/app/current/node_modules/express-rate-limit/dist/index.cjs:658:20)
+Nov 22 19:03:38 ip-172-31-93-64 web[9958]:    at /var/app/current/node_modules/express-rate-limit/dist/index.cjs:710:32
+Nov 22 19:03:38 ip-172-31-93-64 web[9958]:    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Nov 22 19:03:38 ip-172-31-93-64 web[9958]:    at async /var/app/current/node_modules/express-rate-limit/dist/index.cjs:691:5 {
+Nov 22 19:03:38 ip-172-31-93-64 web[9958]:  code: 'ERR_ERL_UNEXPECTED_X_FORWARDED_FOR',
+Nov 22 19:03:38 ip-172-31-93-64 web[9958]:  help: 'https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/'
+Nov 22 19:03:38 ip-172-31-93-64 web[9958]: }
+Nov 22 19:08:27 ip-172-31-93-64 web[10648]: > piccsync-backend@1.0.0 start
+Nov 22 19:08:27 ip-172-31-93-64 web[10648]: > node app.js
+Nov 22 19:08:28 ip-172-31-93-64 web[10690]: /var/app/current/node_modules/@supabase/supabase-js/dist/main/SupabaseClient.js:56
+Nov 22 19:08:28 ip-172-31-93-64 web[10690]:            throw new Error('supabaseUrl is required.');
+Nov 22 19:08:28 ip-172-31-93-64 web[10690]:            ^
+Nov 22 19:08:28 ip-172-31-93-64 web[10690]: Error: supabaseUrl is required.
+Nov 22 19:08:28 ip-172-31-93-64 web[10690]:    at new SupabaseClient (/var/app/current/node_modules/@supabase/supabase-js/dist/main/SupabaseClient.js:56:19)
+Nov 22 19:08:28 ip-172-31-93-64 web[10690]:    at createClient (/var/app/current/node_modules/@supabase/supabase-js/dist/main/index.js:35:12)
+Nov 22 19:08:28 ip-172-31-93-64 web[10690]:    at Object.<anonymous> (/var/app/current/app.js:13:18)
+Nov 22 19:08:28 ip-172-31-93-64 web[10690]:    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+Nov 22 19:08:28 ip-172-31-93-64 web[10690]:    at Module._extensions..js (node:internal/modules/cjs/loader:1893:10)
+Nov 22 19:08:28 ip-172-31-93-64 web[10690]:    at Module.load (node:internal/modules/cjs/loader:1481:32)
+Nov 22 19:08:28 ip-172-31-93-64 web[10690]:    at Module._load (node:internal/modules/cjs/loader:1300:12)
+Nov 22 19:08:28 ip-172-31-93-64 web[10690]:    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+Nov 22 19:08:28 ip-172-31-93-64 web[10690]:    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+Nov 22 19:08:28 ip-172-31-93-64 web[10690]:    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+Nov 22 19:08:28 ip-172-31-93-64 web[10690]: Node.js v24.11.1
+Nov 22 19:08:28 ip-172-31-93-64 web[10724]: > piccsync-backend@1.0.0 start
+Nov 22 19:08:28 ip-172-31-93-64 web[10724]: > node app.js
+Nov 22 19:08:29 ip-172-31-93-64 web[10738]: /var/app/current/node_modules/@supabase/supabase-js/dist/main/SupabaseClient.js:56
+Nov 22 19:08:29 ip-172-31-93-64 web[10738]:            throw new Error('supabaseUrl is required.');
+Nov 22 19:08:29 ip-172-31-93-64 web[10738]:            ^
+Nov 22 19:08:29 ip-172-31-93-64 web[10738]: Error: supabaseUrl is required.
+Nov 22 19:08:29 ip-172-31-93-64 web[10738]:    at new SupabaseClient (/var/app/current/node_modules/@supabase/supabase-js/dist/main/SupabaseClient.js:56:19)
+Nov 22 19:08:29 ip-172-31-93-64 web[10738]:    at createClient (/var/app/current/node_modules/@supabase/supabase-js/dist/main/index.js:35:12)
+Nov 22 19:08:29 ip-172-31-93-64 web[10738]:    at Object.<anonymous> (/var/app/current/app.js:13:18)
+Nov 22 19:08:29 ip-172-31-93-64 web[10738]:    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+Nov 22 19:08:29 ip-172-31-93-64 web[10738]:    at Module._extensions..js (node:internal/modules/cjs/loader:1893:10)
+Nov 22 19:08:29 ip-172-31-93-64 web[10738]:    at Module.load (node:internal/modules/cjs/loader:1481:32)
+Nov 22 19:08:29 ip-172-31-93-64 web[10738]:    at Module._load (node:internal/modules/cjs/loader:1300:12)
+Nov 22 19:08:29 ip-172-31-93-64 web[10738]:    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+Nov 22 19:08:29 ip-172-31-93-64 web[10738]:    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+Nov 22 19:08:29 ip-172-31-93-64 web[10738]:    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+Nov 22 19:08:29 ip-172-31-93-64 web[10738]: Node.js v24.11.1
+Nov 22 19:08:29 ip-172-31-93-64 web[10747]: > piccsync-backend@1.0.0 start
+Nov 22 19:08:29 ip-172-31-93-64 web[10747]: > node app.js
+Nov 22 19:08:30 ip-172-31-93-64 web[10761]: /var/app/current/node_modules/@supabase/supabase-js/dist/main/SupabaseClient.js:56
+Nov 22 19:08:30 ip-172-31-93-64 web[10761]:            throw new Error('supabaseUrl is required.');
+Nov 22 19:08:30 ip-172-31-93-64 web[10761]:            ^
+Nov 22 19:08:30 ip-172-31-93-64 web[10761]: Error: supabaseUrl is required.
+Nov 22 19:08:30 ip-172-31-93-64 web[10761]:    at new SupabaseClient (/var/app/current/node_modules/@supabase/supabase-js/dist/main/SupabaseClient.js:56:19)
+Nov 22 19:08:30 ip-172-31-93-64 web[10761]:    at createClient (/var/app/current/node_modules/@supabase/supabase-js/dist/main/index.js:35:12)
+Nov 22 19:08:30 ip-172-31-93-64 web[10761]:    at Object.<anonymous> (/var/app/current/app.js:13:18)
+Nov 22 19:08:30 ip-172-31-93-64 web[10761]:    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+Nov 22 19:08:30 ip-172-31-93-64 web[10761]:    at Module._extensions..js (node:internal/modules/cjs/loader:1893:10)
+Nov 22 19:08:30 ip-172-31-93-64 web[10761]:    at Module.load (node:internal/modules/cjs/loader:1481:32)
+Nov 22 19:08:30 ip-172-31-93-64 web[10761]:    at Module._load (node:internal/modules/cjs/loader:1300:12)
+Nov 22 19:08:30 ip-172-31-93-64 web[10761]:    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+Nov 22 19:08:30 ip-172-31-93-64 web[10761]:    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+Nov 22 19:08:30 ip-172-31-93-64 web[10761]:    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+Nov 22 19:08:30 ip-172-31-93-64 web[10761]: Node.js v24.11.1
+Nov 22 19:08:30 ip-172-31-93-64 web[10770]: > piccsync-backend@1.0.0 start
+Nov 22 19:08:30 ip-172-31-93-64 web[10770]: > node app.js
+Nov 22 19:08:31 ip-172-31-93-64 web[10785]: /var/app/current/node_modules/@supabase/supabase-js/dist/main/SupabaseClient.js:56
+Nov 22 19:08:31 ip-172-31-93-64 web[10785]:            throw new Error('supabaseUrl is required.');
+Nov 22 19:08:31 ip-172-31-93-64 web[10785]:            ^
+Nov 22 19:08:31 ip-172-31-93-64 web[10785]: Error: supabaseUrl is required.
+Nov 22 19:08:31 ip-172-31-93-64 web[10785]:    at new SupabaseClient (/var/app/current/node_modules/@supabase/supabase-js/dist/main/SupabaseClient.js:56:19)
+Nov 22 19:08:31 ip-172-31-93-64 web[10785]:    at createClient (/var/app/current/node_modules/@supabase/supabase-js/dist/main/index.js:35:12)
+Nov 22 19:08:31 ip-172-31-93-64 web[10785]:    at Object.<anonymous> (/var/app/current/app.js:13:18)
+Nov 22 19:08:31 ip-172-31-93-64 web[10785]:    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+Nov 22 19:08:31 ip-172-31-93-64 web[10785]:    at Module._extensions..js (node:internal/modules/cjs/loader:1893:10)
+Nov 22 19:08:31 ip-172-31-93-64 web[10785]:    at Module.load (node:internal/modules/cjs/loader:1481:32)
+Nov 22 19:08:31 ip-172-31-93-64 web[10785]:    at Module._load (node:internal/modules/cjs/loader:1300:12)
+Nov 22 19:08:31 ip-172-31-93-64 web[10785]:    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+Nov 22 19:08:31 ip-172-31-93-64 web[10785]:    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+Nov 22 19:08:31 ip-172-31-93-64 web[10785]:    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+Nov 22 19:08:31 ip-172-31-93-64 web[10785]: Node.js v24.11.1
+Nov 22 19:08:31 ip-172-31-93-64 web[10795]: > piccsync-backend@1.0.0 start
+Nov 22 19:08:31 ip-172-31-93-64 web[10795]: > node app.js
+Nov 22 19:08:32 ip-172-31-93-64 web[10809]: /var/app/current/node_modules/@supabase/supabase-js/dist/main/SupabaseClient.js:56
+Nov 22 19:08:32 ip-172-31-93-64 web[10809]:            throw new Error('supabaseUrl is required.');
+Nov 22 19:08:32 ip-172-31-93-64 web[10809]:            ^
+Nov 22 19:08:32 ip-172-31-93-64 web[10809]: Error: supabaseUrl is required.
+Nov 22 19:08:32 ip-172-31-93-64 web[10809]:    at new SupabaseClient (/var/app/current/node_modules/@supabase/supabase-js/dist/main/SupabaseClient.js:56:19)
+Nov 22 19:08:32 ip-172-31-93-64 web[10809]:    at createClient (/var/app/current/node_modules/@supabase/supabase-js/dist/main/index.js:35:12)
+Nov 22 19:08:32 ip-172-31-93-64 web[10809]:    at Object.<anonymous> (/var/app/current/app.js:13:18)
+Nov 22 19:08:32 ip-172-31-93-64 web[10809]:    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+Nov 22 19:08:32 ip-172-31-93-64 web[10809]:    at Module._extensions..js (node:internal/modules/cjs/loader:1893:10)
+Nov 22 19:08:32 ip-172-31-93-64 web[10809]:    at Module.load (node:internal/modules/cjs/loader:1481:32)
+Nov 22 19:08:32 ip-172-31-93-64 web[10809]:    at Module._load (node:internal/modules/cjs/loader:1300:12)
+Nov 22 19:08:32 ip-172-31-93-64 web[10809]:    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+Nov 22 19:08:32 ip-172-31-93-64 web[10809]:    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+Nov 22 19:08:32 ip-172-31-93-64 web[10809]:    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+Nov 22 19:08:32 ip-172-31-93-64 web[10809]: Node.js v24.11.1
+Nov 22 19:08:32 ip-172-31-93-64 web[10819]: > piccsync-backend@1.0.0 start
+Nov 22 19:08:32 ip-172-31-93-64 web[10819]: > node app.js
+Nov 22 19:08:33 ip-172-31-93-64 web[10833]: /var/app/current/node_modules/@supabase/supabase-js/dist/main/SupabaseClient.js:56
+Nov 22 19:08:33 ip-172-31-93-64 web[10833]:            throw new Error('supabaseUrl is required.');
+Nov 22 19:08:33 ip-172-31-93-64 web[10833]:            ^
+Nov 22 19:08:33 ip-172-31-93-64 web[10833]: Error: supabaseUrl is required.
+Nov 22 19:08:33 ip-172-31-93-64 web[10833]:    at new SupabaseClient (/var/app/current/node_modules/@supabase/supabase-js/dist/main/SupabaseClient.js:56:19)
+Nov 22 19:08:33 ip-172-31-93-64 web[10833]:    at createClient (/var/app/current/node_modules/@supabase/supabase-js/dist/main/index.js:35:12)
+Nov 22 19:08:33 ip-172-31-93-64 web[10833]:    at Object.<anonymous> (/var/app/current/app.js:13:18)
+Nov 22 19:08:33 ip-172-31-93-64 web[10833]:    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+Nov 22 19:08:33 ip-172-31-93-64 web[10833]:    at Module._extensions..js (node:internal/modules/cjs/loader:1893:10)
+Nov 22 19:08:33 ip-172-31-93-64 web[10833]:    at Module.load (node:internal/modules/cjs/loader:1481:32)
+Nov 22 19:08:33 ip-172-31-93-64 web[10833]:    at Module._load (node:internal/modules/cjs/loader:1300:12)
+Nov 22 19:08:33 ip-172-31-93-64 web[10833]:    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+Nov 22 19:08:33 ip-172-31-93-64 web[10833]:    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+Nov 22 19:08:33 ip-172-31-93-64 web[10833]:    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+Nov 22 19:08:33 ip-172-31-93-64 web[10833]: Node.js v24.11.1
+Nov 22 19:10:24 ip-172-31-93-64 web[11361]: R2 Configuration:
+Nov 22 19:10:24 ip-172-31-93-64 web[11361]: - Endpoint: https://c56a0b5deb7568b708edf3a06756423d.r2.cloudflarestorage.com
+Nov 22 19:10:24 ip-172-31-93-64 web[11361]: - Bucket: storage-project
+Nov 22 19:10:24 ip-172-31-93-64 web[11361]: - Access Key: Set
+Nov 22 19:10:24 ip-172-31-93-64 web[11361]: - Secret Key: Set
+Nov 22 19:10:24 ip-172-31-93-64 web[11361]: R2 configured - bucket will be created on first upload if needed
+Nov 22 19:10:24 ip-172-31-93-64 web[11361]: Server running on port 8080
+Nov 22 19:25:37 ip-172-31-93-64 web[11361]: ValidationError: The 'X-Forwarded-For' header is set but the Express 'trust proxy' setting is false (default). This could indicate a misconfiguration which would prevent express-rate-limit from accurately identifying users. See https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/ for more information.
+Nov 22 19:25:37 ip-172-31-93-64 web[11361]:    at Object.xForwardedForHeader (/var/app/current/node_modules/express-rate-limit/dist/index.cjs:185:13)
+Nov 22 19:25:37 ip-172-31-93-64 web[11361]:    at wrappedValidations.<computed> [as xForwardedForHeader] (/var/app/current/node_modules/express-rate-limit/dist/index.cjs:397:22)
+Nov 22 19:25:37 ip-172-31-93-64 web[11361]:    at Object.keyGenerator (/var/app/current/node_modules/express-rate-limit/dist/index.cjs:658:20)
+Nov 22 19:25:37 ip-172-31-93-64 web[11361]:    at /var/app/current/node_modules/express-rate-limit/dist/index.cjs:710:32
+Nov 22 19:25:37 ip-172-31-93-64 web[11361]:    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Nov 22 19:25:37 ip-172-31-93-64 web[11361]:    at async /var/app/current/node_modules/express-rate-limit/dist/index.cjs:691:5 {
+Nov 22 19:25:37 ip-172-31-93-64 web[11361]:  code: 'ERR_ERL_UNEXPECTED_X_FORWARDED_FOR',
+Nov 22 19:25:37 ip-172-31-93-64 web[11361]:  help: 'https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/'
+Nov 22 19:25:37 ip-172-31-93-64 web[11361]: }
+Nov 23 09:16:32 ip-172-31-93-64 web[39912]: R2 Configuration:
+Nov 23 09:16:32 ip-172-31-93-64 web[39912]: - Endpoint: https://c56a0b5deb7568b708edf3a06756423d.r2.cloudflarestorage.com
+Nov 23 09:16:32 ip-172-31-93-64 web[39912]: - Bucket: storage-project
+Nov 23 09:16:32 ip-172-31-93-64 web[39912]: - Access Key: Set
+Nov 23 09:16:32 ip-172-31-93-64 web[39912]: - Secret Key: Set
+Nov 23 09:16:32 ip-172-31-93-64 web[39912]: R2 configured - bucket will be created on first upload if needed
+Nov 23 09:16:32 ip-172-31-93-64 web[39912]: Server running on port 8080
+Nov 23 09:21:35 ip-172-31-93-64 web[39912]: ValidationError: The 'X-Forwarded-For' header is set but the Express 'trust proxy' setting is false (default). This could indicate a misconfiguration which would prevent express-rate-limit from accurately identifying users. See https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/ for more information.
+Nov 23 09:21:35 ip-172-31-93-64 web[39912]:    at Object.xForwardedForHeader (/var/app/current/node_modules/express-rate-limit/dist/index.cjs:185:13)
+Nov 23 09:21:35 ip-172-31-93-64 web[39912]:    at wrappedValidations.<computed> [as xForwardedForHeader] (/var/app/current/node_modules/express-rate-limit/dist/index.cjs:397:22)
+Nov 23 09:21:35 ip-172-31-93-64 web[39912]:    at Object.keyGenerator (/var/app/current/node_modules/express-rate-limit/dist/index.cjs:658:20)
+Nov 23 09:21:35 ip-172-31-93-64 web[39912]:    at /var/app/current/node_modules/express-rate-limit/dist/index.cjs:710:32
+Nov 23 09:21:35 ip-172-31-93-64 web[39912]:    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Nov 23 09:21:35 ip-172-31-93-64 web[39912]:    at async /var/app/current/node_modules/express-rate-limit/dist/index.cjs:691:5 {
+Nov 23 09:21:35 ip-172-31-93-64 web[39912]:  code: 'ERR_ERL_UNEXPECTED_X_FORWARDED_FOR',
+Nov 23 09:21:35 ip-172-31-93-64 web[39912]:  help: 'https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/'
+Nov 23 09:21:35 ip-172-31-93-64 web[39912]: }
+Nov 23 09:40:12 ip-172-31-93-64 web[41233]: R2 Configuration:
+Nov 23 09:40:12 ip-172-31-93-64 web[41233]: - Endpoint: https://c56a0b5deb7568b708edf3a06756423d.r2.cloudflarestorage.com
+Nov 23 09:40:12 ip-172-31-93-64 web[41233]: - Bucket: storage-project
+Nov 23 09:40:12 ip-172-31-93-64 web[41233]: - Access Key: Set
+Nov 23 09:40:12 ip-172-31-93-64 web[41233]: - Secret Key: Set
+Nov 23 09:40:12 ip-172-31-93-64 web[41233]: R2 configured - bucket will be created on first upload if needed
+Nov 23 09:40:12 ip-172-31-93-64 web[41233]: Server running on port 8080
+Nov 23 09:40:36 ip-172-31-93-64 web[41233]: ValidationError: The 'X-Forwarded-For' header is set but the Express 'trust proxy' setting is false (default). This could indicate a misconfiguration which would prevent express-rate-limit from accurately identifying users. See https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/ for more information.
+Nov 23 09:40:36 ip-172-31-93-64 web[41233]:    at Object.xForwardedForHeader (/var/app/current/node_modules/express-rate-limit/dist/index.cjs:185:13)
+Nov 23 09:40:36 ip-172-31-93-64 web[41233]:    at wrappedValidations.<computed> [as xForwardedForHeader] (/var/app/current/node_modules/express-rate-limit/dist/index.cjs:397:22)
+Nov 23 09:40:36 ip-172-31-93-64 web[41233]:    at Object.keyGenerator (/var/app/current/node_modules/express-rate-limit/dist/index.cjs:658:20)
+Nov 23 09:40:36 ip-172-31-93-64 web[41233]:    at /var/app/current/node_modules/express-rate-limit/dist/index.cjs:710:32
+Nov 23 09:40:36 ip-172-31-93-64 web[41233]:    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Nov 23 09:40:36 ip-172-31-93-64 web[41233]:    at async /var/app/current/node_modules/express-rate-limit/dist/index.cjs:691:5 {
+Nov 23 09:40:36 ip-172-31-93-64 web[41233]:  code: 'ERR_ERL_UNEXPECTED_X_FORWARDED_FOR',
+Nov 23 09:40:36 ip-172-31-93-64 web[41233]:  help: 'https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/'
+Nov 23 09:40:36 ip-172-31-93-64 web[41233]: }

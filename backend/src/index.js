@@ -62,6 +62,11 @@ app.get('/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() });
 });
 
+// Test endpoint
+app.get('/api/test', (req, res) => {
+  res.json({ message: 'API is working', timestamp: new Date().toISOString() });
+});
+
 // Error handling middleware
 app.use((error, req, res, next) => {
   console.error('Error:', error);
