@@ -13,6 +13,20 @@ import Navbar from './components/Navbar';
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+console.log('🔧 App Environment Check:', {
+  supabaseUrl,
+  hasSupabaseKey: !!supabaseKey,
+  apiBaseUrl: import.meta.env.VITE_API_BASE_URL,
+  mode: import.meta.env.MODE,
+  dev: import.meta.env.DEV,
+  prod: import.meta.env.PROD
+});
+
+if (!supabaseUrl || !supabaseKey) {
+  console.error('❌ Missing Supabase configuration!');
+}
+
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 function App() {

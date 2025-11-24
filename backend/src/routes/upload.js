@@ -41,7 +41,6 @@ router.get('/photos', verifySupabaseAuth, async (req, res) => {
       .from('photos')
       .select('*')
       .eq('user_id', req.user.id)
-      .is('group_id', null)
       .order('created_at', { ascending: false });
 
     console.log('📊 Photos query result:', { data: data?.length, error });

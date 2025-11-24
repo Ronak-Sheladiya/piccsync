@@ -11,12 +11,10 @@ const publicRoutes = require('./routes/public');
 const groupRoutes = require('./routes/groups');
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 5000;
+app.set('trust proxy', true);
 
-// Trust proxy for Railway
-if (process.env.TRUST_PROXY === 'true') {
-  app.set('trust proxy', true);
-}
+
 
 // Rate limiting
 const limiter = rateLimit({
@@ -60,6 +58,11 @@ app.use('/api/groups', groupRoutes);
 // Health check
 app.get('/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() });
+});
+
+// Test endpoint for frontend
+app.get('/api/test', (req, res) => {
+  res.json({ message: 'API is working', timestamp: new Date().toISOString() });
 });
 
 // Test endpoint
